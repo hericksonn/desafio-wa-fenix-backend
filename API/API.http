@@ -1,6 +1,178 @@
-@API_HostAddress = http://localhost:5013
+### Desafio WA Fenix API - Exemplos de Requisições
 
-GET {{API_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. Criar Gêneros
+POST https://localhost:7229/api/v1/generos
+Content-Type: application/json
+
+{
+  "nome": "Ficção Científica"
+}
+
+###
+
+POST https://localhost:7229/api/v1/generos
+Content-Type: application/json
+
+{
+  "nome": "Fantasia"
+}
+
+###
+
+POST https://localhost:7229/api/v1/generos
+Content-Type: application/json
+
+{
+  "nome": "Romance"
+}
+
+###
+
+### 2. Listar Gêneros
+GET https://localhost:7229/api/v1/generos
+
+###
+
+### 3. Criar Autores
+POST https://localhost:7229/api/v1/autores
+Content-Type: application/json
+
+{
+  "nome": "Isaac Asimov"
+}
+
+###
+
+POST https://localhost:7229/api/v1/autores
+Content-Type: application/json
+
+{
+  "nome": "J.R.R. Tolkien"
+}
+
+###
+
+POST https://localhost:7229/api/v1/autores
+Content-Type: application/json
+
+{
+  "nome": "Jane Austen"
+}
+
+###
+
+### 4. Listar Autores
+GET https://localhost:7229/api/v1/autores
+
+###
+
+### 5. Criar Livros
+POST https://localhost:7229/api/v1/livros
+Content-Type: application/json
+
+{
+  "titulo": "Fundação",
+  "generoId": 1,
+  "autorId": 1
+}
+
+###
+
+POST https://localhost:7229/api/v1/livros
+Content-Type: application/json
+
+{
+  "titulo": "O Senhor dos Anéis",
+  "generoId": 2,
+  "autorId": 2
+}
+
+###
+
+POST https://localhost:7229/api/v1/livros
+Content-Type: application/json
+
+{
+  "titulo": "Orgulho e Preconceito",
+  "generoId": 3,
+  "autorId": 3
+}
+
+###
+
+### 6. Listar Livros
+GET https://localhost:7229/api/v1/livros
+
+###
+
+### 7. Obter Livro por ID
+GET https://localhost:7229/api/v1/livros/1
+
+###
+
+### 8. Listar Livros por Gênero
+GET https://localhost:7229/api/v1/livros/genero/1
+
+###
+
+### 9. Listar Livros por Autor
+GET https://localhost:7229/api/v1/livros/autor/1
+
+###
+
+### 10. Atualizar Livro
+PUT https://localhost:7229/api/v1/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "Fundação - Edição Especial",
+  "generoId": 1,
+  "autorId": 1
+}
+
+###
+
+### 11. Atualizar Gênero
+PUT https://localhost:7229/api/v1/generos/1
+Content-Type: application/json
+
+{
+  "nome": "Ficção Científica e Tecnologia"
+}
+
+###
+
+### 12. Atualizar Autor
+PUT https://localhost:7229/api/v1/autores/1
+Content-Type: application/json
+
+{
+  "nome": "Isaac Asimov - O Mestre da Ficção Científica"
+}
+
+###
+
+### 13. Obter Gênero por ID
+GET https://localhost:7229/api/v1/generos/1
+
+###
+
+### 14. Obter Autor por ID
+GET https://localhost:7229/api/v1/autores/1
+
+###
+
+### 15. Deletar Livro (se necessário)
+DELETE https://localhost:7229/api/v1/livros/1
+
+###
+
+### 16. Deletar Autor (apenas se não tiver livros)
+DELETE https://localhost:7229/api/v1/autores/1
+
+###
+
+### 17. Deletar Gênero (apenas se não tiver livros)
+DELETE https://localhost:7229/api/v1/generos/1
 
 ###
